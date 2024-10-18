@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://be6fm0kty57rw"]
+
+[ext_resource type="Texture2D" uid="uid://d3iji7jnueux2" path="res://kenney_tower-defense-top-down (1)/PNG/Retina/towerDefense_tile245.png" id="1_n80ai"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fh2mn"]
+
+[node name="Solider A" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+
+[node name="TowerDefenseTile245" type="Sprite2D" parent="."]
+texture = ExtResource("1_n80ai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fh2mn")
