@@ -2,17 +2,22 @@ extends CharacterBody2D
 
 
 var target 
-var Speed = 900
+var Speed = 1200
 var pathName = ""
 var bulletDamage
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")
 	
 	for i in range(pathSpawnerNode.get_child_count()):
 		#print(pathSpawnerNode.get_child(i).name)
 		if pathSpawnerNode.get_child(i).name == pathName:
-			target = pathSpawnerNode.get_child(i).get_child(0).get_child(0).global_position
+			target = pathSpawnerNode.get_child(i).get_child(0).get_child(0).global_position;
+			#hackkk
+			
+			if (target == null):
+				print("target nil")
+				return;
 			
 	velocity = global_position.direction_to(target) * Speed
 	

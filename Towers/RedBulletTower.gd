@@ -21,19 +21,18 @@ func _process(_delta):
 			timer.start()
 	else:
 		for i in get_node("BulletContainer").get_child_count():
-			get_node("BulletContainer").get_child(i).queue_free()
+				get_node("BulletContainer").get_child(i).queue_free()
 	update_powers()
-			
-
 func Shoot():
+	
 	var tempBullet = Bullet.instantiate()
 	tempBullet.pathName = pathName
 	tempBullet.bulletDamage = bulletDamage
 	get_node("BulletContainer").add_child(tempBullet)
 	tempBullet.global_position = $Aim.global_position
 		
-func _on_tower_body_entered(_body):
-	if "Soldier A" in _body.name:
+func _on_tower_body_entered(body):
+	if "Soldier A" in body.name:
 		var tempArray = []
 		currTargets = get_node("Tower").get_overlapping_bodies()
 		
@@ -55,9 +54,7 @@ func _on_tower_body_entered(_body):
 		pathName = currTarget.get_parent().name
 		#print (Bullet)
 
-		 
-
-func _on_towers_body_exited(_body):
+func _on_towers_body_exited(body):
 	currTargets = get_node("Tower").get_overlapping_bodies()
 
 func _on_input_event(viewport, event, shape_idx):
@@ -69,8 +66,6 @@ func _on_input_event(viewport, event, shape_idx):
 		get_node("Upgrade/Upgrade").visible = !get_node("Upgrade/Upgrade").visible
 		get_node("Upgrade/Upgrade").global_position = self.position + Vector2(-572,81)
 		
-
-
 func _on_timer_timeout():
 	Shoot() 
 
@@ -80,9 +75,9 @@ func _on_range_pressed():
 
 
 func _on_attack_speed_pressed():
-	if reload <= 2:
-		reload += 0.1
-	timer.wait_time = 3 - reload
+	if reload <= 4.5:
+		reload += 0.5
+	timer.wait_time = 5 - reload
 
 
 func _on_power_pressed():
@@ -91,7 +86,7 @@ func _on_power_pressed():
 
 func update_powers():
 	get_node("Upgrade/Upgrade/HBoxContainer/Range/Label").text = str(range)
-	get_node("Upgrade/Upgrade/HBoxContainer/AttackSpeed/Label").text = str(3 - reload)
+	get_node("Upgrade/Upgrade/HBoxContainer/AttackSpeed/Label").text = str(5 - reload)
 	get_node("Upgrade/Upgrade/HBoxContainer/Power/Label").text = str(bulletDamage)
 	
 	get_node("Tower/CollisionShape2D").shape.radius = range
