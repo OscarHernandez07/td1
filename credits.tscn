@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ovbsgikhv3ia"]
+[gd_scene load_steps=8 format=3 uid="uid://ovbsgikhv3ia"]
 
 [ext_resource type="Script" path="res://Button.gd" id="1_c5etj"]
 [ext_resource type="Texture2D" uid="uid://cnw8mg71ihudp" path="res://IMG_4927.png" id="2_55qso"]
@@ -6,9 +6,31 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfq8g"]
 bg_color = Color(0.188235, 0.721569, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37v0f"]
 bg_color = Color(0.6, 0.968627, 0.6, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ve303"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qwsw"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -26,13 +48,15 @@ color = Color(0.152941, 0.654902, 0.847059, 1)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 960.0
-offset_top = 2320.0
-offset_right = 1664.0
-offset_bottom = 2584.0
+offset_left = 976.0
+offset_top = 2256.0
+offset_right = 1680.0
+offset_bottom = 2520.0
 theme_override_font_sizes/font_size = 115
 theme_override_styles/normal = SubResource("StyleBoxFlat_tfq8g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_37v0f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ve303")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4qwsw")
 text = "Main Scene"
 script = ExtResource("1_c5etj")
 
@@ -44,17 +68,18 @@ offset_top = 80.0
 offset_right = 2628.0
 offset_bottom = 306.0
 size_flags_stretch_ratio = 0.0
+theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 165
 text = "Worcester Tech Tower Defense!"
 justification_flags = 162
 
 [node name="Label2" type="Label" parent="Node2D"]
-offset_left = 16.0
+offset_left = 120.0
 offset_top = 360.0
-offset_right = 3206.0
+offset_right = 3310.0
 offset_bottom = 888.0
 size_flags_stretch_ratio = 0.0
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 75
 text = "WTHS Tower Defense is a fun tower defense game, where you have 
 to defend your tower from the incoming soldiers. This game was 
 created by Web Dev students Oscar, Naseem, and Brandon.
@@ -67,14 +92,15 @@ offset_top = 928.0
 offset_right = 641.0
 offset_bottom = 1048.0
 size_flags_stretch_ratio = 0.0
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 80
 text = "Developers:"
 justification_flags = 162
 
 [node name="Label4" type="Label" parent="Node2D"]
-offset_left = 560.0
+offset_left = 744.0
 offset_top = 2056.0
-offset_right = 792.0
+offset_right = 976.0
 offset_bottom = 2176.0
 size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 80
@@ -87,10 +113,10 @@ anchor_left = -1.483
 anchor_top = -6.2
 anchor_right = -1.483
 anchor_bottom = -6.2
-offset_left = 1288.0
-offset_top = 2056.0
-offset_right = 1604.0
-offset_bottom = 2176.0
+offset_left = 1752.0
+offset_top = 2072.0
+offset_right = 2068.0
+offset_bottom = 2192.0
 size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 80
 text = "Naseem
@@ -98,12 +124,12 @@ text = "Naseem
 justification_flags = 162
 
 [node name="Img4927" type="Sprite2D" parent="."]
-position = Vector2(1440, 1560.25)
+position = Vector2(1896, 1560)
 scale = Vector2(0.463768, 0.442255)
 texture = ExtResource("2_55qso")
 
 [node name="Img5124(1)" type="Sprite2D" parent="."]
-position = Vector2(672, 1560.31)
+position = Vector2(864, 1560)
 scale = Vector2(0.267066, 0.253669)
 texture = ExtResource("3_50dgn")
 

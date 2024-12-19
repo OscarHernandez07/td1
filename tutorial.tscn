@@ -1,9 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://djvtbjfgog1ea"]
+[gd_scene load_steps=6 format=3 uid="uid://djvtbjfgog1ea"]
 
 [ext_resource type="Script" path="res://Button.gd" id="1_2e6l2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twjrm"]
 bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6w35x"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cye3"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mth5"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [node name="Tutorial" type="Node2D"]
 
@@ -13,23 +38,95 @@ offset_bottom = 2624.0
 color = Color(0.152941, 0.654902, 0.847059, 1)
 
 [node name="Button" type="Button" parent="."]
-offset_left = 928.0
-offset_top = 2000.0
-offset_right = 1720.0
-offset_bottom = 2344.0
+offset_left = 920.0
+offset_top = 2240.0
+offset_right = 1712.0
+offset_bottom = 2513.0
 theme_override_font_sizes/font_size = 200
 theme_override_styles/normal = SubResource("StyleBoxFlat_twjrm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6w35x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3cye3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6mth5")
 text = "Go back"
 script = ExtResource("1_2e6l2")
 
-[node name="200" type="Label" parent="."]
-offset_left = 128.0
-offset_top = 96.0
-offset_right = 1448.0
-offset_bottom = 233.0
+[node name="How2play_label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 1729.0
+offset_bottom = 242.0
+theme_type_variation = &"HeaderLarge"
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 130
+text = "How to Play Tower Defense"
+
+[node name="objective_label" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 272.0
+offset_right = 1627.0
+offset_bottom = 512.0
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 100
-text = "How to Play Tower Defense"
+theme_override_font_sizes/font_size = 90
+text = "1. Objective:"
+
+[node name="objective_explanation_label" type="Label" parent="objective_label"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 2504.0
+offset_bottom = 482.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_font_sizes/font_size = 82
+text = "Prevent enemies from reaching your base by building towers 
+that attack them."
+
+[node name="Gameplay_basics" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 664.0
+offset_right = 1651.0
+offset_bottom = 904.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 90
+text = "2. Gameplay Basics"
+
+[node name="gameplay_basics_explanation" type="Label" parent="Gameplay_basics"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 2504.0
+offset_bottom = 482.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_font_sizes/font_size = 82
+text = "• Place Towers: Build towers along the enemy path to deal
+  damage.
+• Earn Resources: Defeat enemies to get resources for more 
+  towers or upgrades.
+• Upgrade Towers: Make towers stronger to handle tougher 
+  enemies and larger waves.."
+
+[node name="Key Strategies" type="Label" parent="Gameplay_basics"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 848.0
+offset_right = 1603.0
+offset_bottom = 1088.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 90
+text = "3. Key Strategies"
+
+[node name="keystrategies_label" type="Label" parent="Gameplay_basics/Key Strategies"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 2607.0
+offset_bottom = 482.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_font_sizes/font_size = 82
+text = "• Build towers at choke points (narrow or curved areas) to 
+   maximize their effectiveness.
+• Balance between adding new towers and upgrading existing 
+   ones.
+"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

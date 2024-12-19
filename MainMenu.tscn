@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dunydpjcel56c"]
+[gd_scene load_steps=21 format=3 uid="uid://dunydpjcel56c"]
 
 [ext_resource type="PackedScene" uid="uid://b2e4xpqcipow1" path="res://Tiles/TileMap.tscn" id="1_8q2ju"]
 [ext_resource type="Script" path="res://Tutorial.gd" id="2_0pfya"]
+[ext_resource type="Script" path="res://Start.gd" id="2_qvc31"]
 [ext_resource type="Texture2D" uid="uid://dpfs3jx1t76cq" path="res://Tower D image.png" id="2_yp1r6"]
 
 [sub_resource type="Theme" id="Theme_eybeg"]
@@ -14,23 +15,59 @@ font_names = PackedStringArray("", "", "", "", "", "", "", "", "", "", "", "", "
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kseox"]
 bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5vbq"]
 bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
-[sub_resource type="GDScript" id="GDScript_oedtg"]
-script/source = "extends Button
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ryui"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
-
-func _on_pressed():
-	get_tree().change_scene_to_file(\"res://main.tscn\")
-"
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq05r"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue4e5"]
 bg_color = Color(0.886275, 0.254902, 0.670588, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slo4s"]
 bg_color = Color(1, 0.6, 0.6, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm6ah"]
+bg_color = Color(0.886275, 0.254902, 0.670588, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28mgd"]
+bg_color = Color(0.886275, 0.254902, 0.670588, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="GDScript" id="GDScript_doqnw"]
 script/source = "extends Button
@@ -39,13 +76,36 @@ script/source = "extends Button
 
 func _on_pressed():
 	get_tree().change_scene_to_file(\"res://credits.tscn\")
+
 "
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4ig"]
-bg_color = Color(0.890196, 0.85098, 0, 1)
+bg_color = Color(0.890196, 0.729412, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p817a"]
 bg_color = Color(0.968627, 1, 0.694118, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwvru"]
+bg_color = Color(0.890196, 0.729412, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk835"]
+bg_color = Color(0.890196, 0.729412, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [node name="MainMenu" type="Node2D"]
 
@@ -79,44 +139,50 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Start" type="Button" parent="."]
-offset_left = 960.0
-offset_top = 1216.0
-offset_right = 1600.0
-offset_bottom = 1536.0
+offset_left = 897.0
+offset_top = 1217.0
+offset_right = 1537.0
+offset_bottom = 1537.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 200
 theme_override_styles/normal = SubResource("StyleBoxFlat_kseox")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i5vbq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5ryui")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tq05r")
 text = "Start"
-script = SubResource("GDScript_oedtg")
+script = ExtResource("2_qvc31")
 
 [node name="Credits" type="Button" parent="."]
-offset_left = 192.0
+offset_left = 130.0
 offset_top = 1216.0
-offset_right = 768.0
+offset_right = 706.0
 offset_bottom = 1536.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxFlat_ue4e5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_slo4s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mm6ah")
+theme_override_styles/focus = SubResource("StyleBoxFlat_28mgd")
 text = "Credits"
 script = SubResource("GDScript_doqnw")
 
 [node name="Tutorial" type="Button" parent="."]
-offset_left = 1792.0
-offset_top = 1216.0
-offset_right = 2547.0
-offset_bottom = 1536.0
+offset_left = 1720.0
+offset_top = 1224.0
+offset_right = 2496.0
+offset_bottom = 1544.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 200
 theme_override_styles/normal = SubResource("StyleBoxFlat_dn4ig")
 theme_override_styles/hover = SubResource("StyleBoxFlat_p817a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lwvru")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dk835")
 text = "Tutorial"
 script = ExtResource("2_0pfya")
 
 [node name="TowerDImage" type="Sprite2D" parent="."]
-position = Vector2(1276, 380)
-scale = Vector2(1.54305, 1.50835)
+position = Vector2(1252, 400)
+scale = Vector2(1.58278, 1.60382)
 texture = ExtResource("2_yp1r6")
 
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
