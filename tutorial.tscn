@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://djvtbjfgog1ea"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_2e6l2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twjrm"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 2616.0
+offset_bottom = 2624.0
+color = Color(0.152941, 0.654902, 0.847059, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 928.0
+offset_top = 2000.0
+offset_right = 1720.0
+offset_bottom = 2344.0
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_twjrm")
+text = "Go back"
+script = ExtResource("1_2e6l2")
+
+[node name="200" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 96.0
+offset_right = 1448.0
+offset_bottom = 233.0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 100
+text = "How to Play Tower Defense"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
