@@ -5,8 +5,7 @@ var Health = 100
 
 # Function to transition to the ending scene
 func end_game():
-	var ending_scene = preload("res://end_scene.tscn") # Replace with your actual ending scene path
-	get_tree().change_scene_to_file(ending_scene)
+	get_tree().change_scene_to_file("res://end_scene.tscn")
 
 func death():
 	get_parent().get_parent().queue_free()
@@ -22,6 +21,4 @@ func _process(delta):
 		if Game.Health <= 0:
 			end_game()
 
-	if Health <= 0:
-		Game.Gold += 1
-		death()
+

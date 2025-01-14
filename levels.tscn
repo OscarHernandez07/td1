@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://b2k0qy3njjj6d"]
+[gd_scene load_steps=19 format=3 uid="uid://b2k0qy3njjj6d"]
 
 [ext_resource type="Script" path="res://Easy.gd" id="1_dq208"]
 [ext_resource type="Texture2D" uid="uid://dpfs3jx1t76cq" path="res://Tower D image.png" id="1_q0jw1"]
+[ext_resource type="Script" path="res://Medium.gd" id="2_m2gxh"]
 [ext_resource type="Texture2D" uid="uid://buj8cgwexe3u4" path="res://png-clipart-emoji-smiley-happiness-iphone-emoticon-emoji-smile-emoji-face-sticker-thumbnail-removebg-preview (1).png" id="3_o16ef"]
 [ext_resource type="Texture2D" uid="uid://be08t7qw5yj6k" path="res://17d25b235339bc1cea30f02009d6c1de-removebg-preview.png" id="4_k6vps"]
 [ext_resource type="Texture2D" uid="uid://riy2cem35u0h" path="res://b0f7f8165f2dda408cde0730a2f08c23-removebg-preview.png" id="5_orewi"]
@@ -123,6 +124,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_i6886")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_aipbl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o0u3r")
 text = "Medium"
+script = ExtResource("2_m2gxh")
 
 [node name="Hard" type="Button" parent="ColorRect"]
 layout_mode = 0
@@ -167,3 +169,4 @@ scale = Vector2(0.766854, 0.77409)
 texture = ExtResource("5_orewi")
 
 [connection signal="pressed" from="ColorRect/Easy" to="ColorRect/Easy" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/Medium" to="ColorRect/Medium" method="_on_pressed"]

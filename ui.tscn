@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvatid0dx2rjl"]
+[gd_scene load_steps=6 format=3 uid="uid://bvatid0dx2rjl"]
 
 [ext_resource type="PackedScene" uid="uid://dwop7lkv6lq0s" path="res://Towers/RedTowerPanel.tscn" id="1_uye88"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6w6l"]
+bg_color = Color(0, 0.184314, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f43i"]
 
 [sub_resource type="GDScript" id="GDScript_neu7a"]
 script/source = "extends Label
@@ -20,25 +25,28 @@ func _process(delta):
 [node name="UI" type="CanvasLayer"]
 
 [node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 1984.0
 offset_right = 2624.0
-offset_bottom = 640.0
+offset_bottom = 408.0
 
 [node name="FlowContainer" type="FlowContainer" parent="Panel"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
 offset_right = 235.0
-offset_bottom = 235.0
+offset_bottom = 154.0
 scale = Vector2(3, 3)
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 
 [node name="RedTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("1_uye88")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t6w6l")
 
 [node name="RedTowerPanel2" parent="Panel/FlowContainer" instance=ExtResource("1_uye88")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5f43i")
 
 [node name="Health" type="Label" parent="."]
 offset_right = 40.0
