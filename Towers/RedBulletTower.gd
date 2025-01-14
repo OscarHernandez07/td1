@@ -82,7 +82,7 @@ func _on_attack_speed_pressed():
 
 func _on_power_pressed():
 	bulletDamage += 1
-	
+	update_powers()
 
 func update_powers():
 	get_node("Upgrade/Upgrade/HBoxContainer/Range/Label").text = str(range)

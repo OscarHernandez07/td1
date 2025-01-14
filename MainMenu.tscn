@@ -139,12 +139,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Start" type="Button" parent="."]
-offset_left = 897.0
-offset_top = 1217.0
-offset_right = 1537.0
-offset_bottom = 1537.0
+offset_left = 960.0
+offset_top = 1076.0
+offset_right = 1664.0
+offset_bottom = 1336.0
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 200
+theme_override_font_sizes/font_size = 190
 theme_override_styles/normal = SubResource("StyleBoxFlat_kseox")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i5vbq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5ryui")
@@ -153,10 +153,10 @@ text = "Start"
 script = ExtResource("2_qvc31")
 
 [node name="Credits" type="Button" parent="."]
-offset_left = 130.0
-offset_top = 1216.0
-offset_right = 706.0
-offset_bottom = 1536.0
+offset_left = 960.0
+offset_top = 1856.0
+offset_right = 1664.0
+offset_bottom = 2112.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxFlat_ue4e5")
@@ -167,12 +167,12 @@ text = "Credits"
 script = SubResource("GDScript_doqnw")
 
 [node name="Tutorial" type="Button" parent="."]
-offset_left = 1720.0
-offset_top = 1224.0
-offset_right = 2496.0
-offset_bottom = 1544.0
+offset_left = 968.0
+offset_top = 1472.0
+offset_right = 1672.0
+offset_bottom = 1728.0
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 200
+theme_override_font_sizes/font_size = 170
 theme_override_styles/normal = SubResource("StyleBoxFlat_dn4ig")
 theme_override_styles/hover = SubResource("StyleBoxFlat_p817a")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lwvru")
