@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 1000
+#Prob the health for soldier
 var Health = 100
 
 # Function to transition to the ending scene
@@ -19,6 +20,8 @@ func _process(delta):
 
 		# Check if the game's health has reached 0
 		if Game.Health <= 0:
+			Game.Health = Game.MaxHealth
+			Game.Gold = Game.MaxGold
 			end_game()
 
 
