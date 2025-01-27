@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 1000
-var Health = 100
+@export var speed = 500
+var Health = 5
 
 # Function to transition to the ending scene
 func end_game():
