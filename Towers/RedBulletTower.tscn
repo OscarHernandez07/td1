@@ -51,18 +51,7 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36uj5"]
-bg_color = Color(0.266667, 0.627451, 0.909804, 1)
-border_width_left = 15
-border_width_top = 15
-border_width_right = 15
-border_width_bottom = 15
-border_color = Color(0.403922, 0.878431, 0.94902, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d2xo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_laylc"]
 bg_color = Color(0.458824, 0.592157, 0.882353, 1)
@@ -90,7 +79,18 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d2xo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36uj5"]
+bg_color = Color(0.266667, 0.627451, 0.909804, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.403922, 0.878431, 0.94902, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3nos"]
 bg_color = Color(0.87451, 0.0980392, 0.235294, 1)
@@ -178,10 +178,10 @@ alignment = 1
 [node name="Range" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_36uj5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4d2xo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_laylc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_o1o63")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4d2xo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_36uj5")
 
 [node name="Label" type="Label" parent="Upgrade/Upgrade/HBoxContainer/Range"]
 layout_mode = 1
@@ -217,10 +217,10 @@ horizontal_alignment = 1
 [node name="AttackSpeed" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_36uj5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4d2xo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_laylc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_o1o63")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4d2xo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_36uj5")
 
 [node name="Label" type="Label" parent="Upgrade/Upgrade/HBoxContainer/AttackSpeed"]
 layout_mode = 1
@@ -256,10 +256,10 @@ text = "Speed"
 [node name="Power" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_36uj5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4d2xo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_laylc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_o1o63")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4d2xo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_36uj5")
 
 [node name="Label" type="Label" parent="Upgrade/Upgrade/HBoxContainer/Power"]
 layout_mode = 2

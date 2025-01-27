@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
+
 @export var speed = 1000
 #Prob the health for soldier
 var Health = 100
+
 
 # Function to transition to the ending scene
 func end_game():
