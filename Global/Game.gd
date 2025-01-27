@@ -1,4 +1,5 @@
 extends Node
-
-var Gold = 100
-var Health = 5
+var MaxGold = 100
+var Gold = MaxGold
+var MaxHealth = 50
+var Health = MaxHealth
