@@ -76,12 +76,12 @@ func _on_range_pressed():
 
 func _on_attack_speed_pressed():
 	if reload <= 4.5:
-		reload += 0.5
+		reload += 1
 	timer.wait_time = 5 - reload
 
 
 func _on_power_pressed():
-	bulletDamage += 1
+	bulletDamage += 5
 	update_powers()
 
 func update_powers():

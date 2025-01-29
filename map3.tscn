@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dit0mqxj3vhkl"]
+[gd_scene load_steps=7 format=3 uid="uid://i0ma5yufkmvy"]
 
 [ext_resource type="PackedScene" uid="uid://b2e4xpqcipow1" path="res://Tiles/TileMap.tscn" id="1_ud0n7"]
 [ext_resource type="Script" path="res://PathSpawner.gd" id="2_u7p7u"]
 [ext_resource type="PackedScene" uid="uid://bvatid0dx2rjl" path="res://ui.tscn" id="3_201dj"]
-[ext_resource type="PackedScene" uid="uid://b6r4vp54dagnc" path="res://Tiles/Mobs/Stage3P2.tscn" id="3_q45k3"]
+[ext_resource type="PackedScene" uid="uid://57uwymfw1s3m" path="res://Tiles/Mobs/Stage3P2.tscn" id="3_q45k3"]
 [ext_resource type="PackedScene" uid="uid://blimlh6kelwqv" path="res://Tiles/Mobs/Stage3P1.tscn" id="4_1qwjh"]
-[ext_resource type="PackedScene" uid="uid://bsnnecqx81p8m" path="res://Tiles/Mobs/Stage3P3.tscn" id="6_8jd80"]
+[ext_resource type="PackedScene" uid="uid://b0cffsltds8w1" path="res://Tiles/Mobs/Stage3P3.tscn" id="6_8jd80"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(-2, 0)

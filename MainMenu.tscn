@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dunydpjcel56c"]
+[gd_scene load_steps=19 format=3 uid="uid://dunydpjcel56c"]
 
 [ext_resource type="PackedScene" uid="uid://b2e4xpqcipow1" path="res://Tiles/TileMap.tscn" id="1_8q2ju"]
 [ext_resource type="Script" path="res://Tutorial.gd" id="2_0pfya"]
@@ -13,7 +13,7 @@ bg_color = Color(0.152941, 0.654902, 0.847059, 1)
 [sub_resource type="SystemFont" id="SystemFont_fbbtu"]
 font_names = PackedStringArray("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq05r"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kseox"]
 bg_color = Color(0, 0.792157, 0.168627, 1)
 corner_radius_top_left = 90
 corner_radius_top_right = 90
@@ -34,14 +34,7 @@ corner_radius_top_right = 90
 corner_radius_bottom_right = 90
 corner_radius_bottom_left = 90
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kseox"]
-bg_color = Color(0, 0.792157, 0.168627, 1)
-corner_radius_top_left = 90
-corner_radius_top_right = 90
-corner_radius_bottom_right = 90
-corner_radius_bottom_left = 90
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28mgd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue4e5"]
 bg_color = Color(0.886275, 0.254902, 0.670588, 1)
 corner_radius_top_left = 90
 corner_radius_top_right = 90
@@ -62,7 +55,7 @@ corner_radius_top_right = 90
 corner_radius_bottom_right = 90
 corner_radius_bottom_left = 90
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue4e5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28mgd"]
 bg_color = Color(0.886275, 0.254902, 0.670588, 1)
 corner_radius_top_left = 90
 corner_radius_top_right = 90
@@ -79,7 +72,7 @@ func _on_pressed():
 
 "
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk835"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4ig"]
 bg_color = Color(0.890196, 0.729412, 0, 1)
 corner_radius_top_left = 90
 corner_radius_top_right = 90
@@ -94,13 +87,6 @@ corner_radius_bottom_right = 90
 corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwvru"]
-bg_color = Color(0.890196, 0.729412, 0, 1)
-corner_radius_top_left = 90
-corner_radius_top_right = 90
-corner_radius_bottom_right = 90
-corner_radius_bottom_left = 90
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn4ig"]
 bg_color = Color(0.890196, 0.729412, 0, 1)
 corner_radius_top_left = 90
 corner_radius_top_right = 90
@@ -145,13 +131,10 @@ offset_top = 1076.0
 offset_right = 1664.0
 offset_bottom = 1336.0
 theme_override_constants/outline_size = 10
-
 theme_override_font_sizes/font_size = 180
 theme_override_styles/normal = SubResource("StyleBoxFlat_kseox")
-
 theme_override_styles/hover = SubResource("StyleBoxFlat_i5vbq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5ryui")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kseox")
 text = "Start"
 script = ExtResource("2_qvc31")
 
@@ -162,10 +145,10 @@ offset_right = 1664.0
 offset_bottom = 2112.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 150
-theme_override_styles/focus = SubResource("StyleBoxFlat_28mgd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ue4e5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_slo4s")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_mm6ah")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ue4e5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_28mgd")
 text = "Credits"
 script = SubResource("GDScript_doqnw")
 
@@ -175,12 +158,10 @@ offset_top = 1472.0
 offset_right = 1672.0
 offset_bottom = 1728.0
 theme_override_constants/outline_size = 10
-
 theme_override_font_sizes/font_size = 145
 theme_override_styles/normal = SubResource("StyleBoxFlat_dn4ig")
 theme_override_styles/hover = SubResource("StyleBoxFlat_p817a")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lwvru")
-theme_override_styles/normal = SubResource("StyleBoxFlat_dn4ig")
 text = "Tutorial"
 script = ExtResource("2_0pfya")
 

@@ -17,7 +17,7 @@ func _process(delta):
 	get_parent().set_progress(get_parent().get_progress() + speed * delta)
 
 	if get_parent().get_progress_ratio() == 1:
-		Game.Health -= 1
+		Game.Health -= 5
 		death()
 
 		# Check if the game's health has reached 0
