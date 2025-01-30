@@ -1,18 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccl7soopdibav"]
+[gd_scene load_steps=8 format=3 uid="uid://ccl7soopdibav"]
 
 [ext_resource type="Script" path="res://paused_menu.gd" id="1_x4qy0"]
 [ext_resource type="Shader" path="res://paused_menu.gdshader" id="2_3647l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jkqsb"]
 shader = ExtResource("2_3647l")
-shader_parameter/lod = 0.0
+shader_parameter/lod = 1.14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yg718"]
+
+[sub_resource type="Animation" id="Animation_e4c5h"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_xe087"]
 resource_name = "blur"
 length = 0.3
-
-[sub_resource type="Animation" id="Animation_e4c5h"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l7vdj"]
 _data = {
@@ -32,47 +34,58 @@ script = ExtResource("1_x4qy0")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_jkqsb")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+layout_mode = 2
+offset_top = -1557.0
+offset_right = 2628.0
+offset_bottom = 2611.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.152941, 0.654902, 0.847059, 1)
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="Resume" type="Button" parent="."]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 75
-
-[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 933.0
+offset_top = 335.0
+offset_right = 1714.0
+offset_bottom = 616.0
 theme_override_font_sizes/font_size = 200
 text = "Resume"
 
-[node name="Restart" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="."]
 layout_mode = 2
-theme_override_font_sizes/font_size = 200
-text = "Restart"
-
-[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 922.0
+offset_top = 1172.0
+offset_right = 1703.0
+offset_bottom = 1453.0
 theme_override_font_sizes/font_size = 200
 text = "Quit"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 2
+offset_left = 933.0
+offset_top = 762.0
+offset_right = 1714.0
+offset_bottom = 1043.0
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_yg718")
+text = "Restart"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+top_level = true
+layout_mode = 2
+offset_left = 922.0
+offset_top = 691.0
+offset_right = 1703.0
+offset_bottom = 1934.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 200
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_l7vdj")
 }
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
