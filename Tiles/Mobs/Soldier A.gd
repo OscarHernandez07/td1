@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-@export var speed = 500
+@export var speed = 200
 #Prob the health for soldier
-var Health = 100
+var Health = 10
 
 
 # Function to transition to the ending scene

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b2k0qy3njjj6d"]
+[gd_scene load_steps=23 format=3 uid="uid://b2k0qy3njjj6d"]
 
 [ext_resource type="Script" path="res://Easy.gd" id="1_dq208"]
 [ext_resource type="Texture2D" uid="uid://dpfs3jx1t76cq" path="res://Tower D image.png" id="1_q0jw1"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://buj8cgwexe3u4" path="res://png-clipart-emoji-smiley-happiness-iphone-emoticon-emoji-smile-emoji-face-sticker-thumbnail-removebg-preview (1).png" id="3_o16ef"]
 [ext_resource type="Texture2D" uid="uid://be08t7qw5yj6k" path="res://17d25b235339bc1cea30f02009d6c1de-removebg-preview.png" id="4_k6vps"]
 [ext_resource type="Texture2D" uid="uid://riy2cem35u0h" path="res://b0f7f8165f2dda408cde0730a2f08c23-removebg-preview.png" id="5_orewi"]
+[ext_resource type="Texture2D" uid="uid://b4lv280ogptj7" path="res://x.png" id="8_mbmls"]
+[ext_resource type="Texture2D" uid="uid://daf0jken1goqs" path="res://Screenshot 2025-01-31 at 12.10.12 PM.png" id="9_0gm1l"]
+[ext_resource type="Texture2D" uid="uid://div10x1bi2pa2" path="res://Screenshot 2025-01-31 at 12.10.34 PM.png" id="10_gcl8j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvap5"]
 bg_color = Color(0, 0.792157, 0, 1)
@@ -101,10 +104,10 @@ color = Color(0.152941, 0.654902, 0.847059, 1)
 
 [node name="Easy" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 256.0
-offset_top = 1728.0
-offset_right = 768.0
-offset_bottom = 1984.0
+offset_left = 272.0
+offset_top = 1416.0
+offset_right = 784.0
+offset_bottom = 1672.0
 theme_override_font_sizes/font_size = 160
 theme_override_styles/normal = SubResource("StyleBoxFlat_kvap5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5gxxg")
@@ -115,10 +118,10 @@ script = ExtResource("1_dq208")
 
 [node name="Medium" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 984.0
-offset_top = 1728.0
-offset_right = 1640.0
-offset_bottom = 1984.0
+offset_left = 976.0
+offset_top = 1416.0
+offset_right = 1632.0
+offset_bottom = 1672.0
 theme_override_font_sizes/font_size = 160
 theme_override_styles/normal = SubResource("StyleBoxFlat_cdlj2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_i6886")
@@ -129,10 +132,10 @@ script = ExtResource("2_m2gxh")
 
 [node name="Hard" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 1856.0
-offset_top = 1728.0
-offset_right = 2368.0
-offset_bottom = 1984.0
+offset_left = 1852.0
+offset_top = 1408.0
+offset_right = 2364.0
+offset_bottom = 1664.0
 theme_override_font_sizes/font_size = 160
 theme_override_styles/normal = SubResource("StyleBoxFlat_t5q7l")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hayat")
@@ -149,27 +152,50 @@ texture = ExtResource("1_q0jw1")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 520.0
-offset_top = 896.0
+offset_top = 736.0
 offset_right = 2087.0
-offset_bottom = 1101.0
+offset_bottom = 941.0
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 150
 text = "Choose the difficulty. "
 
 [node name="Png-clipart-emoji-smiley-happiness-iphone-emoticon-emoji-smile-emoji-face-sticker-thumbnail-removebg-preview(1)" type="Sprite2D" parent="."]
-position = Vector2(512, 1464)
+position = Vector2(512, 1192)
 texture = ExtResource("3_o16ef")
 
 [node name="17d25b235339Bc1Cea30f02009d6c1De-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(1288, 1467)
+position = Vector2(1296, 1184)
 scale = Vector2(0.725, 0.729)
 texture = ExtResource("4_k6vps")
 
 [node name="B0f7f8165f2Dda408Cde0730a2f08c23-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(2112, 1467)
+position = Vector2(2112, 1176)
 scale = Vector2(0.766854, 0.77409)
 texture = ExtResource("5_orewi")
 
+[node name="X" type="Sprite2D" parent="."]
+position = Vector2(2112, 1536)
+texture = ExtResource("8_mbmls")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1914.0
+offset_top = 1887.0
+offset_right = 2364.0
+offset_bottom = 2096.0
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 75
+text = "Mode Under 
+Maintance"
+
+[node name="Screenshot2025-01-31At12_10_12 pm" type="Sprite2D" parent="."]
+position = Vector2(520, 2007)
+scale = Vector2(0.365741, 0.365325)
+texture = ExtResource("9_0gm1l")
+
+[node name="Screenshot2025-01-31At12_10_34 pm" type="Sprite2D" parent="."]
+position = Vector2(1314, 2006)
+scale = Vector2(0.365414, 0.363707)
+texture = ExtResource("10_gcl8j")
+
 [connection signal="pressed" from="ColorRect/Easy" to="ColorRect/Easy" method="_on_pressed"]
 [connection signal="pressed" from="ColorRect/Medium" to="ColorRect/Medium" method="_on_pressed"]
-[connection signal="pressed" from="ColorRect/Hard" to="ColorRect/Hard" method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://celk0uajn15ej"]
+[gd_scene load_steps=8 format=3 uid="uid://celk0uajn15ej"]
 
 [ext_resource type="PackedScene" uid="uid://b2e4xpqcipow1" path="res://Tiles/TileMap.tscn" id="1_751n1"]
 [ext_resource type="Script" path="res://PathSpawner3.gd" id="2_1rpjm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blimlh6kelwqv" path="res://Tiles/Mobs/Stage3P1.tscn" id="4_ay6xq"]
 [ext_resource type="PackedScene" uid="uid://bvatid0dx2rjl" path="res://ui.tscn" id="5_giaay"]
 [ext_resource type="PackedScene" uid="uid://b0cffsltds8w1" path="res://Tiles/Mobs/Stage3P3.tscn" id="6_gochq"]
+[ext_resource type="PackedScene" uid="uid://ccl7soopdibav" path="res://paused_menu.tscn" id="7_nj022"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(-2, 0)
@@ -15,35 +16,50 @@ layer_0/tile_data = PackedInt32Array(2, 262144, 5, 3, 262144, 5, 4, 262144, 5, 5
 layer_1/name = "Layer1"
 layer_1/tile_data = PackedInt32Array(2228259, 1376256, 5, 1769507, 1376256, 5, 1441812, 1376256, 5, 851989, 1376256, 5, 786457, 1376256, 5, 786462, 1310720, 5, 917534, 1245184, 5, 2555930, 1245184, 5, 2555936, 1245184, 5, 1703973, 1245184, 5, 2490396, 983040, 5, 1114148, 983040, 5, 786465, 983040, 5, 458787, 983040, 5, 262173, 983040, 5, 65568, 983040, 5, 65573, 983040, 5, 851992, 983040, 5, 393251, 1245184, 5, 2621445, 1310720, 0, 2293765, 1310720, 0, 2293764, 1310720, 0, 1114144, 1310720, 0, 1441824, 1310720, 0, 1441804, 1245184, 5, 1703958, 1245184, 5, 1769496, 262144, 2, 1703937, 983040, 5, 1638407, 1376256, 5, 1638416, 1441792, 5, 1900562, 1441792, 5, 1900560, 1376256, 11, 1572899, 1048576, 5, 1638428, 1310720, 0, 1703963, 1310720, 0, 1703962, 1310720, 0, 1900567, 1310720, 0, 1966103, 262144, 3, 2031637, 1310720, 0, 2097173, 1310720, 0, 2097172, 1310720, 0, 2162707, 1310720, 0, 2228243, 262144, 2, 2621456, 1310720, 0, 1769478, 1310720, 0, 1703942, 1310720, 0, 1638405, 1310720, 0, 1507331, 1310720, 0, 1441795, 1310720, 0, 1245192, 1310720, 0, 1179656, 1310720, 0, 1179657, 1310720, 0, 1114122, 1310720, 0, 1048586, 1310720, 0, 458759, 1310720, 0, 393223, 1310720, 0, 393222, 1310720, 0, 393221, 1310720, 0, 327685, 1310720, 0, 327684, 1310720, 0, 131074, 1310720, 0, 65564, 1310720, 0, 131100, 1310720, 0, 262172, 1310720, 0, 327708, 1310720, 0, 524317, 1310720, 0, 589852, 1310720, 0, 655388, 1310720, 0, 655387, 1310720, 0, 720923, 1310720, 0, 786459, 1310720, 0, 327707, 1310720, 0, 27, 1310720, 0, 2555921, 1310720, 0, 2555939, 1441792, 5, 2490406, 1310720, 5, 1900575, 131072, 3, 2490392, 1376256, 5, 2228250, 1310720, 5, 1572902, 1310720, 5, 1179668, 1310720, 5, 1114128, 1376256, 5, 65543, 1310720, 5, 131080, 1376256, 5, 2490377, 262144, 2, 2228231, 983040, 5, 2097154, 983040, 5, 1900578, 720896, 7, 1900577, 720896, 7, 1966113, 720896, 7, 1966114, 720896, 7, 1966115, 720896, 7, 1900579, 720896, 7, 2031651, 720896, 7, 2031650, 720896, 7, 2031649, 131072, 3, 196614, 720896, 7, 262150, 720896, 7, 327686, 720896, 7, 196615, 720896, 7, 2097160, 262144, 2, 2293763, 1048576, 5, 2359303, 1376256, 5, 2162692, 1376256, 5, 2490371, 262144, 2, 2162697, 262144, 2, 2293762, 1441792, 5, 458753, 1441792, 5, 786469, 1441792, 5, 917538, 1441792, 5, 1966112, 131072, 3, 1835037, 131072, 4, 1900574, 65536, 3, 1835024, 262144, 2, 1835025, 262144, 2, 1835026, 262144, 2, 1835027, 262144, 2, 1835028, 262144, 2, 1835029, 262144, 2, 1835030, 262144, 2, 1835031, 262144, 2, 1835032, 262144, 2, 1835033, 262144, 2, 1835034, 262144, 2, 1835035, 262144, 2, 1835036, 262144, 2, 1835015, 262144, 2, 1835014, 262144, 2, 1900549, 262144, 2, 1966085, 262144, 2, 2031622, 262144, 2, 2097159, 262144, 2, 2031625, 262144, 2, 2031626, 262144, 2, 2097163, 262144, 2, 2097164, 262144, 2, 2097165, 262144, 2, 2162703, 262144, 2, 2162704, 262144, 2, 2228242, 262144, 2, 2293780, 262144, 2, 2293781, 262144, 2, 2490370, 262144, 2, 2490372, 262144, 2, 2490373, 262144, 2, 2490374, 262144, 2, 2490375, 262144, 2, 1769479, 262144, 2, 1769480, 262144, 2, 1769481, 262144, 2, 1769482, 262144, 2, 1769483, 262144, 2, 1769484, 262144, 2, 1769485, 262144, 2, 1769486, 262144, 2, 1769487, 262144, 2, 1769488, 262144, 2, 1769489, 262144, 2, 1769490, 262144, 2, 1769491, 262144, 2, 1769492, 262144, 2, 1769493, 262144, 2, 1769494, 262144, 2, 1769495, 262144, 2, 1769497, 262144, 2, 1769498, 262144, 2, 1769499, 262144, 2, 2490384, 262144, 2, 2490383, 262144, 2, 2490382, 262144, 2, 2490381, 262144, 2, 2490380, 262144, 2, 2490379, 262144, 2, 2490378, 262144, 2, 2490376, 262144, 2, 589842, 262144, 2, 524306, 262144, 4)
 
-[node name="Towers" type="Node2D" parent="."]
-
-[node name="PathSpawner" type="Node2D" parent="Towers"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+[node name="PathSpawner" type="Node2D" parent="."]
+position = Vector2(0, 2.08165e-12)
 script = ExtResource("2_1rpjm")
 
-[node name="Timer" type="Timer" parent="Towers/PathSpawner"]
+[node name="Timer" type="Timer" parent="PathSpawner"]
 autostart = true
 
-[node name="Timer2" type="Timer" parent="Towers/PathSpawner"]
+[node name="Timer2" type="Timer" parent="PathSpawner"]
 autostart = true
 
-[node name="Timer3" type="Timer" parent="Towers/PathSpawner"]
+[node name="Timer3" type="Timer" parent="PathSpawner"]
 autostart = true
 
-[node name="Path2DP2" parent="." instance=ExtResource("3_tnne1")]
+[node name="Towers" type="Node2D" parent="."]
+
+[node name="Path2D" parent="." instance=ExtResource("3_tnne1")]
 position = Vector2(342.597, 592.67)
 scale = Vector2(1.11139, 1.05086)
 
-[node name="Path2DP1" parent="." instance=ExtResource("4_ay6xq")]
+[node name="Path2D2" parent="." instance=ExtResource("4_ay6xq")]
 position = Vector2(522.955, -470.699)
 scale = Vector2(0.921962, 0.934249)
-
-[node name="UI" parent="." instance=ExtResource("5_giaay")]
 
 [node name="Path2DP3" parent="." instance=ExtResource("6_gochq")]
 position = Vector2(-86, -1037)
 scale = Vector2(1.24238, 1.26137)
 
-[connection signal="timeout" from="Towers/PathSpawner/Timer" to="Towers/PathSpawner" method="_on_timer_timeout"]
-[connection signal="timeout" from="Towers/PathSpawner/Timer2" to="Towers/PathSpawner" method="_on_timer_timeout2"]
-[connection signal="timeout" from="Towers/PathSpawner/Timer3" to="Towers/PathSpawner" method="_on_timer_timeout3"]
+[node name="UI" parent="." instance=ExtResource("5_giaay")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_nj022")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 436.0
+offset_right = 20.0
+offset_bottom = 436.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PauseMenu"]
+
+[connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="PathSpawner/Timer2" to="PathSpawner" method="_on_timer_timeout2"]
+[connection signal="timeout" from="PathSpawner/Timer3" to="PathSpawner" method="_on_timer_timeout3"]
