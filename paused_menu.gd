@@ -23,12 +23,23 @@ func _process(delta):
 		else:
 			pause()
 
+func reset_game():
+	# Reset Health and Gold
+	Game.Health = Game.MaxHealth
+	Game.Gold = Game.MaxGold
+
 func _on_resume_pressed():
 	resume()
 
 func _on_restart_pressed():
+	reset_game()  # Reset values before restarting
 	resume()
 	get_tree().reload_current_scene()
 
+func _on_main_menu_pressed():
+	reset_game()  # Reset values before going to main menu
+	get_tree().change_scene_to_file("res://main_menu.tscn")
+
 func _on_quit_pressed():
 	get_tree().quit()
+

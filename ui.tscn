@@ -30,12 +30,14 @@ func _process(delta):
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
 offset_left = 1984.0
 offset_right = 2624.0
 offset_bottom = 408.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xioab")
 
 [node name="FlowContainer" type="FlowContainer" parent="Panel"]
+show_behind_parent = true
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
@@ -54,6 +56,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ls5r1")
 
 [node name="Health" type="Label" parent="."]
+show_behind_parent = true
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 100
@@ -61,6 +64,7 @@ text = "Health:"
 script = SubResource("GDScript_neu7a")
 
 [node name="Gold" type="Label" parent="."]
+show_behind_parent = true
 offset_left = 717.0
 offset_right = 968.0
 offset_bottom = 137.0

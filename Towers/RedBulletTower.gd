@@ -1,13 +1,13 @@
 extends StaticBody2D
 
 var Bullet = preload("res://Towers/RedBullet.tscn")
-var bulletDamage = 5
+var bulletDamage = 10000
 var pathName
 var currTargets = []
 var curr
 
 var reload = 0
-var range_diameter = 400
+var range = 400
 
 @onready var timer = get_node("Upgrade/ProgressBar/Timer")
 var startShooting = false
@@ -74,7 +74,7 @@ func _on_timer_timeout():
 	Shoot()
 
 func _on_range_pressed():
-	range_diameter += 30
+	range += 20
 
 func _on_attack_speed_pressed():
 	if reload <= 4.5:
@@ -86,11 +86,11 @@ func _on_power_pressed():
 	update_powers()
 
 func update_powers():
-	get_node("Upgrade/Upgrade/HBoxContainer/Range/Label").text = str(range_diameter)
+	get_node("Upgrade/Upgrade/HBoxContainer/Range/Label").text = str(range)
 	get_node("Upgrade/Upgrade/HBoxContainer/AttackSpeed/Label").text = str(5 - reload)
 	get_node("Upgrade/Upgrade/HBoxContainer/Power/Label").text = str(bulletDamage)
 	
-	get_node("Tower/CollisionShape2D").shape.radius = range_diameter
+	get_node("Tower/CollisionShape2D").shape.radius = range
 
 func _on_range_mouse_entered():
 	get_node("Tower/CollisionShape2D").show()

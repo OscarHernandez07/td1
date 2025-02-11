@@ -16,6 +16,3 @@ func _on_timer_timeout2():
 func _on_timer_timeout3():
 	var tempPath3 = path3.instantiate()
 	add_child(tempPath3)
-	
-
-

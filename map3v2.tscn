@@ -46,6 +46,7 @@ scale = Vector2(1.24238, 1.26137)
 [node name="UI" parent="." instance=ExtResource("5_giaay")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_nj022")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

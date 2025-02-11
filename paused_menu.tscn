@@ -1,13 +1,90 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccl7soopdibav"]
+[gd_scene load_steps=17 format=3 uid="uid://ccl7soopdibav"]
 
 [ext_resource type="Script" path="res://paused_menu.gd" id="1_x4qy0"]
-[ext_resource type="Shader" path="res://paused_menu.gdshader" id="2_3647l"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jkqsb"]
-shader = ExtResource("2_3647l")
-shader_parameter/lod = 1.14
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4g6c"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02lg1"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kww6j"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsv3p"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yg718"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckdaa"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbeu3"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvm6d"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23cab"]
+bg_color = Color(0, 0.792157, 0.168627, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hr32l"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnllv"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8c8tu"]
+bg_color = Color(0.537255, 0.917647, 0.54902, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
 
 [sub_resource type="Animation" id="Animation_e4c5h"]
 length = 0.001
@@ -33,11 +110,11 @@ grow_vertical = 2
 script = ExtResource("1_x4qy0")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_jkqsb")
-layout_mode = 2
-offset_top = -1557.0
-offset_right = 2628.0
-offset_bottom = 2611.0
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.152941, 0.654902, 0.847059, 1)
@@ -56,17 +133,28 @@ theme_override_constants/separation = 200
 [node name="Resume" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_s4g6c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_02lg1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kww6j")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qsv3p")
 text = "Resume"
 
 [node name="Restart" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
 theme_override_styles/normal = SubResource("StyleBoxFlat_yg718")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ckdaa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cbeu3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nvm6d")
 text = "Restart"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_23cab")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hr32l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tnllv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8c8tu")
 text = "Quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
