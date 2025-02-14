@@ -3,8 +3,8 @@ extends CharacterBody2D
 var target
 var Speed = 2000
 var pathName = ""
-var bulletDamage = 1
-var soldier_health = 2
+var bulletDamage = 0.1
+var soldier_health = 5
 
 func _physics_process(_delta):
 	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")

@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var Bullet = preload("res://Towers/RedBullet.tscn")
-var bulletDamage = 5
+var bulletDamage = 1
 var pathName
 var currTargets = []
 var curr
@@ -14,7 +14,7 @@ var startShooting = false
 
 func _process(_delta):
 	get_node("Upgrade/ProgressBar").global_position = self.position + Vector2(-64, -81)
-	if is_instance_valid(curr):
+	if is_instance_valid(curr) and curr.global_position.distance_to(global_position) <= range:
 		self.look_at(curr.global_position)
 		if timer.is_stopped():
 			Shoot()
@@ -75,7 +75,7 @@ func _on_timer_timeout():
 	Shoot()
 
 func _on_range_pressed():
-	range += 20
+	range += 10
 
 func _on_attack_speed_pressed():
 	if reload <= 4.5:
@@ -83,7 +83,7 @@ func _on_attack_speed_pressed():
 	timer.wait_time >= 5 - reload
 
 func _on_power_pressed():
-	bulletDamage += 5
+	bulletDamage += 1 
 	update_powers()
 
 func update_powers():

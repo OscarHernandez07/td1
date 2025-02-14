@@ -14,10 +14,10 @@ script/source = "extends ProgressBar
 
 
 func _ready():
-	self.max_value = get_parent().Health
+	self.max_value = get_parent().soldier_health
 	
 func _process(delta):
-	self.value = get_parent().Health
+	self.value = get_parent().soldier_health
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fh2mn"]
@@ -34,7 +34,6 @@ offset_bottom = -41.0
 theme_override_styles/background = SubResource("StyleBoxFlat_o3nos")
 theme_override_styles/fill = SubResource("StyleBoxFlat_pfnra")
 value = 50.0
-show_percentage = false
 script = SubResource("GDScript_rr0ex")
 
 [node name="TowerDefenseTile245" type="Sprite2D" parent="."]

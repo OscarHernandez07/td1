@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 400
+@export var speed = 500
 var Health = 100  # Soldier health
 
 func end_game():
