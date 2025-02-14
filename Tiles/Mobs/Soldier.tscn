@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://be6fm0kty57rw"]
+[gd_scene load_steps=7 format=3 uid="uid://be6fm0kty57rw"]
 
 [ext_resource type="Texture2D" uid="uid://d3iji7jnueux2" path="res://kenney_tower-defense-top-down (1)/PNG/Retina/towerDefense_tile245.png" id="1_n80ai"]
+[ext_resource type="Script" path="res://Tiles/Mobs/Soldier A.gd" id="1_vypkx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3nos"]
 bg_color = Color(0.87451, 0.0980392, 0.235294, 1)
@@ -21,8 +22,9 @@ func _process(delta):
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fh2mn"]
 
-[node name="Solider A" type="CharacterBody2D"]
+[node name="Soldier A" type="CharacterBody2D"]
 scale = Vector2(2, 2)
+script = ExtResource("1_vypkx")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = -52.0

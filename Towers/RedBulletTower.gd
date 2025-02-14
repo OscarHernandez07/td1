@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var Bullet = preload("res://Towers/RedBullet.tscn")
-var bulletDamage = 10000
+var bulletDamage = 5
 var pathName
 var currTargets = []
 var curr
@@ -17,6 +17,7 @@ func _process(_delta):
 	if is_instance_valid(curr):
 		self.look_at(curr.global_position)
 		if timer.is_stopped():
+			Shoot()
 			timer.start()
 	else:
 		for i in range(get_node("BulletContainer").get_child_count()): # Fixed loop

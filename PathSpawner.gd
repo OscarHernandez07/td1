@@ -5,8 +5,8 @@ extends Node2D
 
 var soldier_count = 0
 var total_soldiers_spawned = 0
-var max_soldier = 5
-var group_size = 1   # Soldiers per spawn
+var max_soldier = 50
+var group_size = 1 # Soldiers per spawn
 
 func _on_timer_timeout():
 	if total_soldiers_spawned < max_soldier:
@@ -20,3 +20,4 @@ func spawn_group(num):
 			var tempPath = path.instantiate()
 			add_child(tempPath)
 			total_soldiers_spawned += 1  # Track total soldiers spawned
+

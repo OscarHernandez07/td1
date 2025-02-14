@@ -3,8 +3,8 @@ extends CharacterBody2D
 var target
 var Speed = 2000
 var pathName = ""
-var bulletDamage
-
+var bulletDamage = 1
+var soldier_health = 2
 
 func _physics_process(_delta):
 	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")
@@ -18,7 +18,7 @@ func _physics_process(_delta):
 	   	 
 			if target_node:
 				target = target_node.global_position
-				# Check if the target position is valid (not NaN or infinite)
+				 #Check if the target position is valid (not NaN or infinite)
 				if target == Vector2():
 					print("Target position is invalid (empty Vector2).")
 					return
@@ -26,7 +26,7 @@ func _physics_process(_delta):
 				print("Target node does not exist.")
 				return
 	   	 
-			# If target is still invalid or null after these checks, exit
+			 #If target is still invalid or null after these checks, exit
 			if target == null:
 				print("Target is null!")
 				return
@@ -38,6 +38,13 @@ func _physics_process(_delta):
 
 func _on_area_2d_body_entered(body):
 	if "Soldier A" in body.name:
-		body.soldier_health -= bulletDamage
+		#print(soldier_health)
+		soldier_health -= bulletDamage
+		
+		if soldier_health <= 0:
+			body.get_parent().get_parent().queue_free()
+		
 		queue_free()
+		
+
 	
