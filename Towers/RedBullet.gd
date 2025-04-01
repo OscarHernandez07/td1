@@ -4,7 +4,6 @@ var target
 var Speed = 2000
 var pathName = ""
 var bulletDamage = 0.1
-var soldier_health = 5
 
 func _physics_process(_delta):
 	var pathSpawnerNode = get_tree().get_root().get_node("Main/PathSpawner")
@@ -38,10 +37,10 @@ func _physics_process(_delta):
 
 func _on_area_2d_body_entered(body):
 	if "Soldier A" in body.name:
-		#print(soldier_health)
-		soldier_health -= bulletDamage
+		print(body.Health)
+		body.Health -= bulletDamage
 		
-		if soldier_health <= 0:
+		if body.Health <= 0:
 			body.get_parent().get_parent().queue_free()
 		
 		queue_free()

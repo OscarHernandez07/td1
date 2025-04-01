@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 500
-var Health = 100  # Soldier health
+var Health = 3  # Soldier health
 
 func end_game():
 	get_tree().change_scene_to_file("res://end_scene.tscn")
@@ -30,11 +30,10 @@ func _process(delta):
 		return  # Stop movement when paused
 
 	get_parent().set_progress(get_parent().get_progress() + speed * delta)
-
 	# If the soldier reaches the end
 	if get_parent().get_progress_ratio() == 1:
-		Game.Health -= 1
 		death()
+		Game.Health -= 10
 
 		# Check if the game's health has reached 0
 		if Game.Health <= 0:
